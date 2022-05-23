@@ -19,7 +19,7 @@ class App extends Component {
     <div className="background">
     <div className="App">
       <header className="App-header">
-        <img src="https://www.iconpacks.net/icons/2/free-location-pin-icon-2965-thumb.png" className="App-logo" alt="logo" />
+        <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" className="App-logo" alt="logo" />
         <p>
          Search<code> your Location</code> Here.
           

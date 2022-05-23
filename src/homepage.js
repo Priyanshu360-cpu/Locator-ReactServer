@@ -19,22 +19,22 @@ class App extends Component {
     <div className="background">
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src="https://www.iconpacks.net/icons/2/free-location-pin-icon-2965-thumb.png" className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
-          <input type="textarea" 
+         Search<code> your Location</code> Here.
+          
+        </p>
+        <p><input type="textarea" 
           name="textValue"
           onChange={this.handleChange}
-        />
-        </p>
+        /></p>
         <a
           className="App-link"
           href="/contact"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
-        </a>
+About Dev.        </a>
       </header>
     </div>
     </div>

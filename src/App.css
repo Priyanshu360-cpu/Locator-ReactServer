@@ -5,7 +5,7 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin 2s ease-in-out alternate infinite;
 }
 
 .App-header {
@@ -16,7 +16,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  background:url(https://media.istockphoto.com/vectors/vector-map-with-pin-pointer-illustration-vector-id535913739?k=20&m=535913739&s=612x612&w=0&h=cS_zINbhJ9T9vRlaAc4S_-Yd45f6qs5zliFHZ7KNhFI=)
+  background:url(https://wallpaperaccess.com/full/539186.jpg)
 }
 
 .App-link {
@@ -25,9 +25,15 @@
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    transform : scale(1);
+    opacity   : 1;
+}
+50% {
+    transform : scale(0.75);
+    opacity   : 0.25;
+}
+to {
+    transform : scale(1);
+    opacity   : 1;
+}
 }

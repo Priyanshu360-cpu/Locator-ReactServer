@@ -27,7 +27,7 @@ class App extends Component {
         <p><input type="textarea" 
           name="textValue"
           onChange={this.handleChange}
-        /></p>
+        /><button value="Go">GO</button></p>
         <a
           className="App-link"
           href="/contact"

@@ -1,45 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import { Component } from 'react';
+import Contact from './contact';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      textAreaValue: ""
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
+import { BrowserRouter as Router, Routes, Route}
+    from 'react-router-dom';
+import Home from './homepage';
 
-  handleChange(event) {
-    this.setState({ textAreaValue: event.target.value });
-  }
-
-  render(){return (
-    <div className="background">
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-          <input type="textarea" 
-          name="textValue"
-          onChange={this.handleChange}
-        />
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-    </div>
-  );
+function App() {
+return (
+    <Router>
+    <Routes>
+        <Route exact path='/' exact element={<Home />} />
+        <Route path='/contact' element={<Contact/>} />
+    </Routes>
+    </Router>
+);
 }
-}
-
+  
 export default App;

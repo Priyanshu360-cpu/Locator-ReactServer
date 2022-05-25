@@ -4,7 +4,7 @@ import React from 'react';
 const Contact = () => {
   return (
     <div>
-      <h1>Mail us on feedback@geeksforgeeks.org</h1>
+      <h1>Just another Page</h1>
     </div>
   );
 };

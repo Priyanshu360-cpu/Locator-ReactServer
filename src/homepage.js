@@ -23,13 +23,11 @@ class App extends Component {
     let c=""
     for(let i=0;i<a.length;i++){
       let b=this.state.coder+a[i];
-
     setTimeout(()=>{
       c=c+b;
       this.setState({coder:c
     }) 
   },(i+1)*1000);
-  
 }
    this.setState({stopper:1})
   }

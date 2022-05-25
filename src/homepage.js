@@ -29,6 +29,7 @@ class App extends Component {
     }) 
   },(i+1)*1000);
 }
+console.log(window.location.href)
    this.setState({stopper:1})
   }
   }
@@ -41,12 +42,11 @@ class App extends Component {
         <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" className="App-logo" alt="logo" />
         <p>
          Search<code>{this.state.coder}<this.handlenamer/></code> Here.
-          
         </p>
         <p><input type="textarea" 
           name="textValue"
           onChange={this.handleChange}
-        /><button class="button button1" value="Go" onClick={() => window.open('/'+this.state.textAreaValue)}>GO</button></p>
+        /><button class="button button1" value="Go" onClick={() => window.open('/mapview?id='+this.state.textAreaValue.split("/")[1])}>GO</button></p>
         <a
           className="App-link"
           href="/contact"

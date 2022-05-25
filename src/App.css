@@ -104,4 +104,5 @@ to {
 .button::before {
   content: "🔎 ";
 }
-.button1 {background-color: #4CAF50;}
+.button1 {background-color: #4CAF50;
+}

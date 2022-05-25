@@ -31,7 +31,7 @@ class App extends Component {
 }
 
    this.setState({stopper:1})
-  }
+    }
   }
   render(){return (
     <div className="background">
@@ -46,7 +46,11 @@ class App extends Component {
         <p><input type="textarea" 
           name="textValue"
           onChange={this.handleChange}
-        /><button class="button button1" value="Go" onClick={() => window.open('/mapview?id='+this.state.textAreaValue.split("/")[1])}>GO</button></p>
+        /><button class="button button1" value="Go" onClick={() => {
+          let a=this.state.textAreaValue.split("/")[0].toLowerCase().includes("localhost")?this.state.textAreaValue.split("/")[1]:1;
+          if(a!=1&&this.state.textAreaValue.includes('/'))window.open('/mapview?id='+(a))
+          else alert("WRONG LINK")
+          }}>GO</button></p>
         <a
           className="App-link"
           href="/contact"

@@ -27,7 +27,7 @@ class App extends Component {
         <p><input type="textarea" 
           name="textValue"
           onChange={this.handleChange}
-        /><button value="Go" onClick={() => window.open('/contact')}>GO</button></p>
+        /><button value="Go" onClick={() => window.open('/'+this.state.textAreaValue)}>GO</button></p>
         <a
           className="App-link"
           href="/contact"

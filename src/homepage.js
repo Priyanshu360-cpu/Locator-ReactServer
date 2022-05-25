@@ -8,6 +8,7 @@ class App extends Component {
     this.state = {
       textAreaValue: "",
       coder: "",
+      stopper:0,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handlenamer=this.handlenamer.bind(this);
@@ -16,16 +17,23 @@ class App extends Component {
   handleChange(event) {
     this.setState({ textAreaValue: event.target.value });
   }
-  handlenamer(event){
-    let a=['Y','O','U','R','\n','L','O','C','A','T','I','O','N']
-    for(let i=0;i<a.length;i++)
-    setTimeout(()=>{ if(i<a.length){
-      this.setState({coder:this.state.coder+a[i]
-    })
-  i=i+1;}},(i+1)*1000)
-   console.log("works");
-  }
+  handlenamer(){
+    if(this.state.stopper==0){
+    let a=['\n','Y','O','U','R','\n','L','O','C','A','T','I','O','N'+'\n']
+    let c=""
+    for(let i=0;i<a.length;i++){
+      let b=this.state.coder+a[i];
 
+    setTimeout(()=>{
+      c=c+b;
+      this.setState({coder:c
+    }) 
+  },(i+1)*1000);
+  
+}
+   this.setState({stopper:1})
+  }
+  }
   render(){return (
     <div className="background">
     <div className="App">
@@ -34,7 +42,7 @@ class App extends Component {
       <header className="App-header">
         <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" className="App-logo" alt="logo" />
         <p>
-         Search<code>{this.state.coder}<this.handlenamer></this.handlenamer></code> Here.
+         Search<code>{this.state.coder}<this.handlenamer/></code> Here.
           
         </p>
         <p><input type="textarea" 

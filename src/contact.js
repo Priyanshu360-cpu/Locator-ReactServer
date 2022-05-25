@@ -1,29 +1,35 @@
+import React, { Component } from 'react';
+import GoogleMapReact from 'google-map-react';
 
-import React from 'react';
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
-const Map: React.FC<{}> = () => {
-  const ref = React.useRef(null);
-const [map, setMap] = React.useState();
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-React.useEffect(() => {
-  if (ref.current && !map) {
-    setMap(new window.google.maps.Map(ref.current, {}));
-  }
-}, [ref, map]);
-return <div ref={ref} />
-};
-const Contact = () => {
-  const render = (status: Status) => {
-    return <h1>{status}</h1>;
+class SimpleMap extends Component {
+  static defaultProps = {
+    center: {
+      lat: 59.95,
+      lng: 30.33
+    },
+    zoom: 11
   };
-  return (
-    <div>
-      <Wrapper apiKey={"key"} render={render}>
-        <Map></Map>
-</Wrapper>
-      <h1>Page ID - {window.location.href.split("?id=")[1]}</h1>
-    </div>
-  );
-};
-  
-export default Contact;
+
+  render() {
+    return (
+      
+      <div style={{ height: '100vh', width: '100%' }}>
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: "key" }}
+          defaultCenter={this.props.center}
+          defaultZoom={this.props.zoom}
+        >
+          <AnyReactComponent
+            lat={59.955413}
+            lng={30.337844}
+            text="My Marker"
+          />
+        </GoogleMapReact>
+      </div>
+    );
+  }
+}
+
+export default SimpleMap;

@@ -6,13 +6,24 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      textAreaValue: ""
+      textAreaValue: "",
+      coder: "",
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handlenamer=this.handlenamer.bind(this);
   }
 
   handleChange(event) {
     this.setState({ textAreaValue: event.target.value });
+  }
+  handlenamer(event){
+    let a=['Y','O','U','R','\n','L','O','C','A','T','I','O','N']
+    for(let i=0;i<a.length;i++)
+    setTimeout(()=>{ if(i<a.length){
+      this.setState({coder:this.state.coder+a[i]
+    })
+  i=i+1;}},(i+1)*1000)
+   console.log("works");
   }
 
   render(){return (
@@ -23,7 +34,7 @@ class App extends Component {
       <header className="App-header">
         <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" className="App-logo" alt="logo" />
         <p>
-         Search<code> your Location</code> Here.
+         Search<code>{this.state.coder}<this.handlenamer></this.handlenamer></code> Here.
           
         </p>
         <p><input type="textarea" 

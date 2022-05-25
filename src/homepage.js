@@ -29,7 +29,7 @@ class App extends Component {
     }) 
   },(i+1)*1000);
 }
-console.log(window.location.href)
+
    this.setState({stopper:1})
   }
   }

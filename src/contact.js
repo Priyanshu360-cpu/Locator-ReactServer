@@ -9,7 +9,7 @@ const containerStyle = {
 const center = {
   lat: parseFloat(window.location.href.split("?coord=")[1].split(",")[0]),
   lng:  parseFloat(window.location.href.split("?coord=")[1].split(",")[1])
-};
+};//http://localhost:3000/mapview?id=Me?coord=-3.745,-38.523
 const onLoad = marker => {
   console.log('marker: ', marker)
 }

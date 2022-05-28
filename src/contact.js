@@ -7,16 +7,16 @@ const containerStyle = {
 };
 
 const center = {
-  lat: -3.745,
-  lng: -38.523
+  lat: parseFloat(window.location.href.split("?coord=")[1].split(",")[0]),
+  lng:  parseFloat(window.location.href.split("?coord=")[1].split(",")[1])
 };
 const onLoad = marker => {
   console.log('marker: ', marker)
 }
-const position = {
-  lat: 37.772,
-  lng: -122.214
+const onClick = marker => {
+  console.log('marker: ', marker)
 }
+
 function MyComponent() {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
@@ -46,6 +46,7 @@ function MyComponent() {
     >
       <Marker
       icon={"https://cdn.discordapp.com/emojis/855018524044820480.gif?size=64"}
+      onClick={onClick}
       position={center}
     />
     </GoogleMap></>

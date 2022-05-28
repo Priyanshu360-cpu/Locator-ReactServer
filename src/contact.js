@@ -30,7 +30,7 @@ function MyComponent() {
   }, [])
 
   return isLoaded ? (
-    <><h1>Page ID - {window.location.href.split("?id=")[1]}</h1> <></>
+    <><h1> Saved Location ID - {window.location.href.split("?id=")[1]}</h1> <></>
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={center}
@@ -38,9 +38,6 @@ function MyComponent() {
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
-
-     
-
     </GoogleMap></>
       
   ) : <></>

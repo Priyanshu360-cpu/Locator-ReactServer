@@ -1,6 +1,6 @@
 import React from 'react'
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
-
+import { Marker } from '@react-google-maps/api';
 const containerStyle = {
   width: '1600px',
   height: '500px'
@@ -10,7 +10,13 @@ const center = {
   lat: -3.745,
   lng: -38.523
 };
-
+const onLoad = marker => {
+  console.log('marker: ', marker)
+}
+const position = {
+  lat: 37.772,
+  lng: -122.214
+}
 function MyComponent() {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
@@ -30,14 +36,18 @@ function MyComponent() {
   }, [])
 
   return isLoaded ? (
-    <><h1> Saved Location ID - {window.location.href.split("?id=")[1]}</h1> <></>
+    <><h1>Location ID - {window.location.href.split("?id=")[1]}</h1> <></>
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={center}
-      zoom={12}
+      zoom={7}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
+      <Marker
+      icon={"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"}
+      position={center}
+    />
     </GoogleMap></>
       
   ) : <></>

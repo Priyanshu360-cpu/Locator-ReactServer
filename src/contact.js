@@ -36,7 +36,7 @@ function MyComponent() {
   }, [])
 
   return isLoaded ? (
-    <><h1>Location ID - {window.location.href.split("?id=")[1]}</h1> <></>
+    <><h1>Location ID - {window.location.href.split("?id=")[1].split("?")[0]}</h1> <></>
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={center}

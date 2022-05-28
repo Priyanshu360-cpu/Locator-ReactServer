@@ -45,7 +45,7 @@ function MyComponent() {
       onUnmount={onUnmount}
     >
       <Marker
-      icon={"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"}
+      icon={"https://cdn.discordapp.com/emojis/855018524044820480.gif?size=64"}
       position={center}
     />
     </GoogleMap></>

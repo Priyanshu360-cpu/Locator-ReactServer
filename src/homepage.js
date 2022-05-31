@@ -17,9 +17,10 @@ class App extends Component {
   handleChange(event) {
     this.setState({ textAreaValue: event.target.value });
   }
-  handlenamer(){
+  handlenamer(texter){
+    
     if(this.state.stopper==0){
-    let a=['\n','Y','O','U','R','\n','L','O','C','A','T','I','O','N'+'\n']
+    let a=[...texter.texter]
     let c=""
     for(let i=0;i<a.length;i++){
       let b=this.state.coder+a[i];
@@ -41,7 +42,7 @@ class App extends Component {
       <header className="App-header">
         <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" className="App-logo" alt="logo" />
         <p>
-         Search<code>{this.state.coder}<this.handlenamer/></code> Here.
+         Search<code>{this.state.coder}<this.handlenamer texter=" YOUR LOCATION" /></code> Here.
         </p>
         <p><input type="textarea" 
           name="textValue"

@@ -1,14 +1,15 @@
 import React from 'react'
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import { Marker } from '@react-google-maps/api';
+
 const containerStyle = {
   width: '1600px',
   height: '500px'
 };
 
 const center = {
-  lat: parseFloat(window.location.href.split("?coord=")[1].split(",")[0]),
-  lng:  parseFloat(window.location.href.split("?coord=")[1].split(",")[1])
+  lat: window.location.href.search("coord")==-1?-3.745:parseFloat(window.location.href.split("?coord=")[1].split(",")[0]),
+  lng:  window.location.href.search("coord")==-1?-38.523:parseFloat(window.location.href.split("?coord=")[1].split(",")[1])
 };//http://localhost:3000/mapview?id=Me?coord=-3.745,-38.523
 const onLoad = marker => {
   console.log('marker: ', marker)

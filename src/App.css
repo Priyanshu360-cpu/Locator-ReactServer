@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -14,6 +15,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index:1;
   font-size: calc(10px + 2vmin);
   color: white;
   background:url(https://wallpaperaccess.com/full/539186.jpg)
@@ -43,6 +45,7 @@ to {
   width:100%;
   height: 50px;
   position: relative;
+  z-index: 1;
   border: 0cm;
 }
 .maina{
@@ -66,10 +69,17 @@ to {
 }
 .sidemenu{
   position:absolute;
+  width:2%;
   left:1%;
-  top:10%
+  top: 100px;
+  z-index: 100;
+  height: 50px;
 }
-.sidemenu:hover{
+.hide {
+  display: none;
+}
+.sidemenu:hover  + .hide {
+  display: block;
   cursor:pointer;
   width:25%;
   height:1450%;

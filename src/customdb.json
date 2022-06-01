@@ -4,7 +4,11 @@
         "Protection":123456789,
         "latitude": -3.745,
         "longitude":-38.523,
-        "messages":[
+        "messages":{
+            "Password":true,
+            "Protection":123456789,
+            "content":
+        [
             {
                 "Group 1":[
                     "hi","hello","help"
@@ -13,6 +17,6 @@
                     "Please stop","Programming is life"
                 ]
             }
-        ]
+        ]}
     }
 }

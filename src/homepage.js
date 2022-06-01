@@ -17,10 +17,10 @@ class App extends Component {
   handleChange(event) {
     this.setState({ textAreaValue: event.target.value });
   }
-  handlenamer(texter){
+  handlenamer(handler){
     
     if(this.state.stopper==0){
-    let a=[...texter.texter]
+    let a=[...handler.texter]
     let c=""
     for(let i=0;i<a.length;i++){
       let b=this.state.coder+a[i];

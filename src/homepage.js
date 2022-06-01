@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
-
+import db from './customdb.json';
 class App extends Component {
   constructor() {
     super();
@@ -22,6 +22,7 @@ class App extends Component {
     if(this.state.stopper==0){
     let a=[...handler.texter]
     let c=""
+    console.log(db[124]==null);
     for(let i=0;i<a.length;i++){
       let b=this.state.coder+a[i];
     setTimeout(()=>{
@@ -49,8 +50,11 @@ class App extends Component {
           onChange={this.handleChange}
         /><button class="button button1" value="Go" onClick={() => {
           let a=this.state.textAreaValue.split("/")[0].toLowerCase().includes("localhost")?this.state.textAreaValue.split("/")[1]:1;
-          if(a!=1&&this.state.textAreaValue.includes('/'))window.open('/mapview?id='+(a))
-          else alert("WRONG LINK")
+          if(a!=1&&this.state.textAreaValue.includes('/')&&db[this.state.textAreaValue.split("/")[1]]){
+            if(db[this.state.textAreaValue.split("/")[1]]["Password"]) window.open('/password?id='+this.state.textAreaValue.split("/")[1])
+            else window.open('/mapview?id='+(a)+"?coord="+db[this.state.textAreaValue.split("/")[1]]["latitude"]+","+db[this.state.textAreaValue.split("/")[1]]["longitude"])
+          }
+          else window.open('/mapview?id='+(a))
           }}>GO</button></p>
         <a
           className="App-link"

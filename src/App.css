@@ -62,6 +62,9 @@ to {
 .shadow-textarea textarea.form-control {
     padding-left: 0.8rem;
 }
+#show {
+  display: none
+}
 .boda{
  position: absolute;
  left: 30%;
@@ -72,7 +75,7 @@ to {
   left:1%;
   top:10%
 }
-.sidemenu:hover{
+.sidemenu:hover {
   cursor:pointer;
   width:25%;
   height:1450%;

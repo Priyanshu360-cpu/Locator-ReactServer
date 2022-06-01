@@ -1,6 +1,6 @@
 
 import React from 'react';
-  
+import db from './customdb.json';
 const Contact = () => {
   return (
     <div>

@@ -69,22 +69,16 @@ to {
 }
 .sidemenu{
   position:absolute;
-  width:2%;
   left:1%;
-  top: 100px;
-  z-index: 100;
-  height: 50px;
+  top:10%
 }
-.hide {
-  display: none;
-}
-.sidemenu:hover  + .hide {
-  display: block;
+.sidemenu:hover{
   cursor:pointer;
   width:25%;
   height:1450%;
   background-color:aliceblue;
 }
+
 
 .imaga{
   position:absolute;

@@ -3,7 +3,16 @@
         "Password":false,
         "Protection":123456789,
         "latitude": -3.745,
-        "longitude":-38.523
-        
+        "longitude":-38.523,
+        "messages":[
+            {
+                "Group 1":[
+                    "hi","hello","help"
+                ],
+                "Group 2":[
+                    "Please stop","Programming is life"
+                ]
+            }
+        ]
     }
 }

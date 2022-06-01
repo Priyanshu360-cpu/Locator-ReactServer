@@ -22,7 +22,7 @@ class App extends Component {
     if(this.state.stopper==0){
     let a=[...handler.texter]
     let c=""
-    console.log(db[124]==null);
+    
     for(let i=0;i<a.length;i++){
       let b=this.state.coder+a[i];
     setTimeout(()=>{
